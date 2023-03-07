@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room.et</title>
+    <link rel="icon" type="image/x-icon" href="faviconR.ico">
+    <link rel="stylesheet" href="css/bootstrap.css">
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    *{
+      padding: 0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+      }
+      .carousel slide{
+        position: relative;
+      }
+      .one{
+        border-radius:200px;
+        position: fixed;
+  bottom: 500px;
+  opacity: 0.9;
+  margin-left: 70px;
+  width: 1200px;
+
+      }
+      label.logo{
+        color:white;
+        font-size: 20px;
+        line-height: 80px;
+        float:left;
+        font-weight: bold;
+        font-family: 20px lato,sans-serif;
+      }
+     .one ul{
+        float:right;
+      
+      }
+      .one ul li{
+       display:inline-block;
+       margin-right: 30px;
+      }
+      .one ul li a{
+        color:white;
+        font-size:17px;
+        text-transform: uppercase;
+        text-decoration: none;
+        
+      }
+      button{
+       background-color: orangered;
+       margin: 10px;
+       color: white;
+      }
+      nav ul li a button{
+        color:black;
+        font-size:17px;
+        text-transform: uppercase;
+      }
+    .column {
+  float: left;
+  width: 20%;
+  padding: 5px;
+}
+    .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text {
+  position: absolute;
+  bottom: -480px;
+  left: 23.5px;
+  height: 300px;
+  width: 259px;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  padding-top: 120px;
+  padding-left: 65px;
+  padding-right: 20px;
+}
+.box {
+  display: flex;
+    position: absolute;
+  bottom: 10px;
+  opacity: 0.9;
+  margin-left: 70px;
+  width: 1200px;
+  
+}
+.menu-icon{
+  width:25px;
+  cursor: pointer;
+ display: none;
+}
+@media only screen and (max-width:700px){
+  *{
+    margin-left: 0px;
+  }
+  .one ul{
+  width:100%;
+  background:linear-gradient(white);
+  position: absolute;
+  top:75px;
+  right:0;
+  z-index: 2;
+  }
+  .one ul li{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+  }
+  .one ul li a{
+   color:#fff;
+
+  }
+  .menu-icon{
+    display:block;
+    margin-left: 300px;
+    margin-top: 30px;
+  }
+  #menuList{
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .box .bg{
+    box-sizing: border-box;
+    width: 50%;
+  }
+  .box .bg h3{
+    margin-left: 0px;
+  }
+  .box .bg p{
+    margin-left: 0px;
+
+  }
+   .box .row .col .btn {
+margin-left: 30px;
+  }
+  button{
+    margin-left: 30px;
+  }
+  .box{
+   justify-content: left;
+    margin-left: 0px;
+    width:min-content;
+    max-width: 50px;
+  }
+  footer{
+    margin-left: 0px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+  
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="Room1.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 670px;">
+            </div>
+            <div class="carousel-item">
+              <img src="Room2.jpg" class="d-block w-100" alt="..." style="width: 100%; height: 670px;">
+            </div>       
+</div>
+</div>
+<div class="one">
+  <label class="logo">Room.et</label>
+  
+  <ul id="menuList">
+    <li><a href="#">home</a></li>
+    <li><a href="#">explore</a></li>
+    <li><a href="signIn.html">sign in</a></li>
+    <li><a href="signup.html"><button>signup</button></a></li></ul>
+    <img src="menu.webp" class="menu-icon"  onclick="togglemenu()" >
+  </div>
+
+    <div class="box">
+<div class="bg-img" style="background-color: whitesmoke; padding-top: 40px; margin: 55px; border-radius: 7px; padding-bottom: 10px;">
+    <h3 style="margin-left: 70px;">Latest reviews. Lowest prices.</h3>
+    <p style="margin-left: 70px;">let us help you find the right hotel for you.</p>
+    <form class="row g-3" id="">
+        <div class="col-auto">
+          <input type="text" placeholder="Search for a city or particular hotel" style="background-color: white; width: 317%; height: 60px; margin-left: 70px; border: none; border-radius: 5px 0 0 5px;">
+        </div>
+        <div class="col-auto">
+          <button type="submit" class="btn btn-danger mb-3" style="margin-left: 607px; height: 60px; width: 160px; border-radius: 0 5px 5px 0;">Search</button>
+        </div>
+      </form>
+        </div></div>
+ 
+        <h3 style="margin-left: 30px; padding-top: 80px;">Explore Destinations</h3>
+        <div class="row" style="padding-top: 30px; margin-left: 20px;">
+        <div class="column">
+          <img src="Lalibela.png" style="width:100%; height: 300px; border-radius: 10px;">
+            <div class="text"><h1 style="font-size: 30px; padding-left: 20px;">Lalibela</h1></div>
+        </div>
+        <div class="column">
+          <img src="Jimma.jpg" style="width:100%; height: 300px; border-radius: 10px;">
+            <div class="text" style="position: absolute; left: 292px; width: 260px;"><h1 style="font-size: 30px; padding-left: 20px;">Jimma</h1></div>
+        </div>
+        <div class="column">
+          <img src="Debrezeit.jpg" style="width:100%; height: 300px; border-radius: 10px;">
+          <div class="text" style="position: absolute; left: 560px; width: 260px;"><h1 style="font-size: 30px; padding-left: 0px;">Debrezeit</h1></div>
+        </div>
+        <div class="column">
+          <img src="Arba Minch.jpg" style="width:100%; height: 300px; border-radius: 10px;">
+          <div class="text" style="position: absolute; left: 830px; width: 259px;"><h1 style="font-size: 30px; padding-right: 15px;">Arba Minch</h1></div>
+        </div>
+        <div class="column">
+          <img src="Harar.jpg" style="width:100%; height: 300px; border-radius: 10px;">
+          <div class="text" style="position: absolute; left: 1098px; width: 260px;"><h1 style="font-size: 30px; padding-left: 30px;">Harar</h1></div>
+        </div>
+      </div>
+
+
+
+      <!-- <div class="container">
+        <div class="row row-cols-2 row-cols-lg-3">
+          
+          <div class="col-4 col-lg-2" style="margin-right: 0px;">
+            <div class="column" >
+                <img src="Lalibela.png" style="width: 240px; height: 300px; border-radius: 10px; margin-right: 0px;">
+                  <div class="text"><h1 style="font-size: 30px; padding-left: 20px;">Assela</h1></div>
+              </div>
+          </div>
+          
+          <div class="col-4 col-lg-2" style="margin-right: 100px;">
+            <div class="column">
+                <img src="Jimma.jpg" style="width: 240px; height: 300px; border-radius: 10px; margin-left: 50px;">
+                  <div class="text" style="position: absolute; left: 292px; width: 260px;"><h1 style="font-size: 30px; padding-left: 20px;">Jimma</h1></div>
+              </div>
+          </div>
+          
+          <div class="col-4 col-lg-2">
+            <div class="column">
+                <img src="Debrezeit.jpg" style="width: 240px; height: 300px; border-radius: 10px;">
+                 <div class="text" style="position: absolute; left: 560px; width: 260px;"><h1 style="font-size: 30px; padding-left: 0px;">Debrezeit</h1></div>
+              </div>
+          </div>
+          
+          <div class="col-4 col-lg-2">
+            <div class="column">
+                <img src="Arba Minch.jpg" style="width: 240px; height: 300px; border-radius: 10px;">
+                 <div class="text" style="position: absolute; left: 830px; width: 259px;"><h1 style="font-size: 30px; padding-right: 15px;">Arba Minch</h1></div>
+              </div>
+          </div>
+          
+          <div class="col-4 col-lg-2">
+            <div class="column">
+                <img src="Harar.jpg" style="width: 240px; height: 300px; border-radius: 5px;">
+                 <div class="text" style="position: absolute; left: 1098px; width: 260px;"><h1 style="font-size: 30px; padding-left: 30px;">Harar</h1></div>
+              </div>
+          </div>
+        </div>
+      </div> -->
+
+
+        <h3 style="margin-left: 30px; padding-top: 80px;">Best Deals</h3>
+        <div class="container" style="margin-left: 20px;">
+            <div class="row">
+            <div class="container" style="padding-top: 15px;">
+            <div class="row row-cols-2 row-cols-lg-3">
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px;">
+                    <img src="KefetewGuest1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍ፊጋ አካባቢ ፣ አዲስ አበባ <br> <big style="font-weight: bold;">Kefetew Hotel</big> <br> 2040 ETB/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 70px;">
+                    <img src="DarrikGuest1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍22 አካባቢ፣አዲስ አበባ <br> <big style="font-weight: bold;">Darrik Hotel</big> <br> 2094 ETB/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 140px;">
+                    <img src="Washington1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍ቦሌ አትላስ፣አዲስ አበባ <br> <big style="font-weight: bold;">Wahington Hotel</big> <br> 2147 ETB/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 210px;">
+                    <img src="BlueSky1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍24 አካባቢ፣አዲስ አበባ <br> <big style="font-weight: bold;">Blue Sky Hotel</big> <br> 2147 ETB/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 280px;">
+                    <img src="Ghion1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍አዲስ አበባ ስታዲየም <br> <big style="font-weight: bold;">Ghion Hotel</big> <br> 2147 ETB/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+            </div>
+            </div>
+
+            <div class="container" style="padding-top: 40px;">
+            <div class="row row-cols-2 row-cols-lg-3">
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px;">
+                    <img src="AbatGuest1jpg.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍ቦሌ መድኃንያለም አካባቢ <br> <big style="font-weight: bold;">Abat Hotel</big> <br> 41 USD/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 70px;">
+                    <img src="AdotTina1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍መስቀል ፍላወር <br> <big style="font-weight: bold;">Adot-Tina Hotel</big> <br> 41 USD/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 140px;">
+                    <img src="Semien1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍ፒያሳ ፣ አዲስ አበባ <br> <big style="font-weight: bold;">Semien Hotel</big> <br> 41 USD/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 210px;">
+                    <img src="Maekot1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍6ኪሎ አካባቢ ፣ አዲስ አበባ <br> <big style="font-weight: bold;">Maekot Hotel</big> <br> 42 USD/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+                <div class="col-4 col-lg-2">
+                    <div class="card" style="width: 240px; margin-left: 280px;">
+                    <img src="ECCO1.jpg" class="card-img-top">
+                    <div class="card-body">
+                    <p class="card-text">📍22 አካባቢ ፣ አዲስ አበባ <br> <big style="font-weight: bold;">ECCO Hotel</big> <br> 43 USD/Night <br> <label style="color: red;">★★★★★</label> (5) </p>
+                    </div></div></div>
+            </div>
+            </div>
+            </div>
+        </div>
+        <script>
+          var menuList = document.getElementById("menuList");
+          menuList.style.maxHeight="0px";
+          function togglemenu(){
+          if(menuList.style.maxHeight="0px"){
+            menuList.style.maxHeight="130px";
+          }else{
+            menuList.style.maxHeight="0px";
+          }}
+        </script>
+    </body>
+
+
+    <footer style=" padding-top: 30px;">
+        <div class="bg-light" style="height: 270px; width: 1330px; padding-top: 30px;">
+            <a href="#" style="color: red; font-size: 22px; font-weight: 600; padding-left: 50%; padding-top: 40px; text-decoration: none;">Room.et</a> <br><br>
+            <a href="#" style="color: black; font-weight: 600; text-decoration: none; padding-left: 47%;">Home</a>
+            <a href="#" style="color: black; font-weight: 600; text-decoration: none; padding-left: 5%;">Explore</a> <br><br>
+            <p style="padding-left: 48%; color: rgb(144, 144, 144);">Contact us on <a href="tel:9883" style="color: red; text-decoration: none;">9883</a></p>
+            <p style="padding-left: 46%; color: rgb(144, 144, 144);">Copyright @ 2023 Room.et</p>
+        </div>
+    </footer>  
+</html>
